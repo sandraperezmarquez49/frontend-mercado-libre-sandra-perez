@@ -1,0 +1,57 @@
+.center{
+    margin-top: 0px;
+}
+
+
+
+.white{
+    background: white;
+}
+
+.mat-grid-tile{  
+    text-align: left !important;
+}
+
+.img{
+    height: 90%;
+    width: 90%;
+}
+
+.buy-b{
+    color: white;
+    background-color: #3483fa;
+    width: 90%;
+}
+
+
+
+
+
+
+.flexbox-container {
+	display: -ms-flex;
+	display: -webkit-flex;
+	display: block;
+    text-align: left;
+    width: 90%;
+  
+}
+
+
+.flexbox-container-l {
+	display: -ms-flex;
+	display: -webkit-flex;
+	display: block;
+    text-align: left;
+}
+
+.margin-l{
+    @media  screen and  (max-width: 425px) {
+     margin-left: 21px;
+    }
+    @media  screen and  (min-width: 426px) {
+        margin-left: 30px;
+    }
+
+}
+

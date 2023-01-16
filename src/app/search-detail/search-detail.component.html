@@ -1,0 +1,40 @@
+<body class="grey">
+    <div class="separator"></div>
+    <div class="center">
+        <div class="separator"></div>
+        <mat-grid-list [cols]="breakpoint"  rowHeight = "600px" (window:resize)="onResize($event)" 
+            *ngFor="let item  of product.items" class="white">
+            <mat-grid-tile [colspan] = "breakpoint1"> <img class="img" src="{{item?.picture}}"></mat-grid-tile>
+            <mat-grid-tile>
+                <div class="flexbox-container" >
+                    <div>
+                        <h2><strong>{{item?.title}}</strong></h2><br>
+                    </div>
+                    <div>
+                        <h1>$ {{item?.price.amount | number}}</h1>
+                    </div>
+                    <div>
+                        <button mat-button class="buy-b">Comprar</button>
+                    </div>
+
+                </div>
+            </mat-grid-tile>
+        </mat-grid-list>
+        
+        <mat-grid-list cols = "4" rowHeight = "400px" class="white">
+            <mat-grid-tile [colspan] = "3"[rowspan] = "1">
+                <div class="flexbox-container-l" >
+                    <div class="margin-l">
+                        <h1><strong> Descripcíon del producto</strong></h1>
+                    </div>
+                    <div class="margin-l">
+                        <h3 >{{product?.description}}</h3> 
+                    </div>
+
+                </div>
+               
+            </mat-grid-tile>
+           
+        </mat-grid-list>
+    </div>
+</body>

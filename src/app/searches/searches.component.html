@@ -1,0 +1,26 @@
+<body class="grey">
+    <div class="separator"></div>
+    <div class="center">
+        <div class="separator"></div>
+        <mat-grid-list cols="1" rowHeight="190px">
+            <mat-grid-tile *ngFor="let product of products">
+                <div class="flexbox-container hand"  *ngFor="let item  of product.items" (click)="goToDetail(product)">
+                    <div >
+                        <img class="img"  src="{{item?.picture}}"> 
+                    </div>
+                    <div>
+                        <div class="flexbox-container" >
+                            <div  class="margin-items  margin-t"><h1>$ {{item?.price.amount | number}}</h1></div>
+                            <div><p class="h4">{{product.seller_address.city.name}}</p></div>
+                        </div>
+                        <div class="flexbox-container" >
+                            <div  class="margin-items"><h2>{{item?.title}}</h2></div>
+                            <div class="separator"></div>
+                        </div>
+                        
+                    </div>
+                 </div>
+              </mat-grid-tile>
+        </mat-grid-list>
+    </div>
+</body>

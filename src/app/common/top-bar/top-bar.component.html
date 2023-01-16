@@ -1,0 +1,12 @@
+<mat-toolbar color="primary" class="colum">
+    <div  class="center">
+        <form [formGroup]="searchForm" novalidate>
+            <button mat-icon-button class="icon-logo" [routerLink]="['']" ></button>
+            <input  type="text" formControlName="searchInput"
+                    maxlength="50" class="searchInput" placeholder=" Nunca dejes de buscar"  (ngModelChange)="searchView($event)" [(ngModel)]="searchInput">
+            <button mat-button class="icon-search" (click)="search()"> <mat-icon>search</mat-icon></button>
+                    
+        </form>
+    </div>
+</mat-toolbar>
+
